@@ -121,7 +121,7 @@ def get_all_pokemons(page: int = 1, items: int = 10) -> List[Pokemon]:
     items = min(items, 20)
     max_page = math.ceil(len(list_pokemons) / items)
     current_page = min(page, max_page)
-    start = (current_page - 1) * items
+    start = (current_page - 1) * itemi
     stop = start + items if start + items <= len(list_pokemons) else len(list_pokemons)
     sublist = list(list_pokemons.keys())[start:stop]
 
